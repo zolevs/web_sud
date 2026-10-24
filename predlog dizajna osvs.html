@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="sr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основни суд у Вршцу | Званична интернет презентација</title>
+    <!-- Tailwind CSS CDN za moderan dizajn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        serbia: {
+                            blue: '#0C4076',
+                            darkblue: '#072444',
+                            red: '#C6363C',
+                            gold: '#D4AF37'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- Traka pristupačnosti i kontakt na vrhu -->
+    <div class="bg-serbia-darkblue text-slate-200 text-xs py-2 px-4 border-b border-blue-900">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center space-x-4">
+                <span><i class="fa-solid fa-phone mr-1 text-slate-400"></i> 013/831-343</span>
+                <span class="hidden sm:inline"><i class="fa-solid fa-envelope mr-1 text-slate-400"></i> uprava@vs.os.sud.rs</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-clock mr-1 text-slate-400"></i> Пон-Пет: 07:30 - 15:30</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <span class="text-slate-400">Приступачност:</span>
+                <button onclick="document.body.classList.toggle('text-lg')" class="hover:text-white font-bold px-1" title="Увећај фонт">A+</button>
+                <button onclick="document.body.classList.toggle('invert')" class="hover:text-white px-1" title="Високи контраст"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                <span class="text-slate-600">|</span>
+                <a href="#" class="font-semibold text-white">ЋИР</a>
+                <a href="#" class="text-slate-400 hover:text-white">LAT</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Glavni Header sa grbom i nazivom -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-14 bg-serbia-blue rounded flex items-center justify-center text-white shadow-inner">
+                    <i class="fa-solid fa-scale-balanced text-2xl text-serbia-gold"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-semibold tracking-wider text-slate-500 uppercase block">Република Србија</span>
+                    <h1 class="text-xl sm:text-2xl font-bold text-serbia-darkblue leading-tight">Основни суд у Вршцу</h1>
+                    <span class="text-xs text-slate-500 hidden sm:block">Судска надлежност за Град Вршац и Општину Бела Црква</span>
+                </div>
+            </div>
+
+            <!-- Pretraga -->
+            <div class="hidden md:flex items-center">
+                <div class="relative">
+                    <input type="text" placeholder="Претражи сајт..." class="bg-slate-100 border border-slate-300 text-sm rounded-full pl-4 pr-10 py-1.5 focus:outline-none focus:ring-2 focus:ring-serbia-blue focus:bg-white w-60 transition">
+                    <button class="absolute right-3 top-2 text-slate-400 hover:text-serbia-blue">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Glavni Meni -->
+        <nav class="bg-serbia-blue text-white shadow-md">
+            <div class="max-w-7xl mx-auto px-4 flex justify-between">
+                <div class="flex space-x-1 sm:space-x-6 text-sm font-medium overflow-x-auto py-2.5">
+                    <a href="#" class="text-white bg-blue-900/60 px-3 py-1.5 rounded hover:bg-blue-900">Почетна</a>
+                    <a href="#o-sudu" class="text-slate-200 hover:text-white px-3 py-1.5 rounded hover:bg-blue-900/40">О суду</a>
+                    <a href="#e-usluge" class="text-slate-200 hover:text-white px-3 py-1.5 rounded hover:bg-blue-900/40 font-semibold text-yellow-300">Е-Услуге</a>
+                    <a href="#obrasci" class="text-slate-200 hover:text-white px-3 py-1.5 rounded hover:bg-blue-900/40">Обрасци</a>
+                    <a href="#takse" class="text-slate-200 hover:text-white px-3 py-1.5 rounded hover:bg-blue-900/40">Судске таксе</a>
+                    <a href="#vesti" class="text-slate-200 hover:text-white px-3 py-1.5 rounded hover:bg-blue-900/40">Вести и огласи</a>
+                    <a href="#kontakt" class="text-slate-200 hover:text-white px-3 py-1.5 rounded hover:bg-blue-900/40">Контакт</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero / Brzi Servisi za građane -->
+    <section class="bg-gradient-to-b from-slate-100 to-slate-200/50 py-10 border-b border-slate-200" id="e-usluge">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-800">Електронски сервиси и најчешћи захтеви</h2>
+                <p class="text-sm text-slate-600 mt-2">Брз приступ информацијама о судским предметима, рочиштима и документацији</p>
+            </div>
+
+            <!-- Kartice najčešćih servisa -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <!-- Servis 1 -->
+                <a href="https://portal.sud.rs" target="_blank" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-serbia-blue transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-blue-50 text-serbia-blue flex items-center justify-center text-xl mb-4 group-hover:bg-serbia-blue group-hover:text-white transition">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1 group-hover:text-serbia-blue transition">Ток предмета</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Онлајн претрага статуса судских предмета преко јединственог портала судова Србије.</p>
+                    </div>
+                    <span class="mt-4 text-xs font-semibold text-serbia-blue flex items-center">Претражи предмет <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                </a>
+
+                <!-- Servis 2 -->
+                <a href="#" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-serbia-blue transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-clipboard-list"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1 group-hover:text-emerald-700 transition">Е-Огласна табла</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Јавна судска писмена, огласи и одлуке доступни на електронској табли суда.</p>
+                    </div>
+                    <span class="mt-4 text-xs font-semibold text-emerald-700 flex items-center">Отвори таблу <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                </a>
+
+                <!-- Servis 3 -->
+                <a href="#obrasci" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-serbia-blue transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-4 group-hover:bg-amber-600 group-hover:text-white transition">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1 group-hover:text-amber-700 transition">Обрасци и захтеви</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Преузмите уверења о неосуђиваности, молбе и формуларе за грађане и привреду.</p>
+                    </div>
+                    <span class="mt-4 text-xs font-semibold text-amber-700 flex items-center">Преузми обрасце <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                </a>
+
+                <!-- Servis 4 -->
+                <a href="#takse" class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-serbia-blue transition group flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-lg bg-red-50 text-serbia-red flex items-center justify-center text-xl mb-4 group-hover:bg-serbia-red group-hover:text-white transition">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-base mb-1 group-hover:text-serbia-red transition">Судске таксе</h3>
+                        <p class="text-xs text-slate-500 leading-relaxed">Рачуни за уплату судске таксе, депозита и смернице за генерисање уплатница.</p>
+                    </div>
+                    <span class="mt-4 text-xs font-semibold text-serbia-red flex items-center">Инструкције за плаћање <i class="fa-solid fa-arrow-right ml-1"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Glavni sadržaj -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Leva kolona (Vesti i O sudu) - 2/3 širine -->
+        <div class="lg:col-span-2 space-y-8">
+            
+            <!-- Dobrodošlica i reč predsednika -->
+            <section id="o-sudu" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm">
+                <div class="flex items-center space-x-2 text-serbia-blue font-semibold text-sm mb-2">
+                    <i class="fa-solid fa-landmark"></i>
+                    <span>Основни суд у Вршцу</span>
+                </div>
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900 mb-4">Добродошли на интернет презентацију суда</h2>
+                <div class="text-slate-600 text-sm leading-relaxed space-y-3">
+                    <p>Основни суд у Вршцу, сходно Закону о седиштима и подручјима судова и јавних тужилаштава, надлежан је за подручје општине Бела Црква и града Вршца.</p>
+                    <p>Желимо да допринесемо стварању делотворног и модерног правосуђа уважавајући право грађана на приступ правди, равноправан третман на суду и правично суђење, уз потпуну јавност и транспарентност у раду.</p>
+                </div>
+
+                <!-- Info kartice: Sedište i Sudska jedinica -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6 pt-6 border-t border-slate-100">
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200/60">
+                        <span class="text-xs font-bold text-serbia-blue uppercase block mb-1">Седиште суда</span>
+                        <h4 class="font-bold text-slate-800 text-base">Вршац</h4>
+                        <p class="text-xs text-slate-600 mt-1">Жарка Зрењанина 41-43, 26300 Вршац</p>
+                        <p class="text-xs text-slate-600 mt-1"><i class="fa-solid fa-phone text-slate-400 mr-1"></i> 013/831-343</p>
+                    </div>
+
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200/60">
+                        <span class="text-xs font-bold text-serbia-blue uppercase block mb-1">Судска јединица</span>
+                        <h4 class="font-bold text-slate-800 text-base">Бела Црква</h4>
+                        <p class="text-xs text-slate-600 mt-1">Бели Трг 1, 26340 Бела Црква</p>
+                        <p class="text-xs text-slate-600 mt-1"><i class="fa-solid fa-phone text-slate-400 mr-1"></i> 013/851-171</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Vesti i Saopštenja -->
+            <section id="vesti" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 class="text-xl font-bold text-slate-900">Актуелности и обавештења</h2>
+                    <a href="#" class="text-xs font-semibold text-serbia-blue hover:underline">Све вести &rarr;</a>
+                </div>
+                <div class="space-y-4">
+                    <article class="p-4 rounded-lg border border-slate-100 hover:bg-slate-50 transition flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+                        <div>
+                            <span class="text-xs text-slate-400 block mb-1">20. октобар 2026.</span>
+                            <h3 class="font-semibold text-slate-800 text-sm hover:text-serbia-blue"><a href="#">Обавештење о пријему поднесака путем електронске поште</a></h3>
+                            <p class="text-xs text-slate-500 mt-1">Детаљна упутства за грађане и пуномоћнике о начину слања електронских поднесака суда.</p>
+                        </div>
+                        <a href="#" class="text-xs text-serbia-blue font-medium shrink-0 self-start sm:self-center">Прочитај &rarr;</a>
+                    </article>
+                    <article class="p-4 rounded-lg border border-slate-100 hover:bg-slate-50 transition flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+                        <div>
+                            <span class="text-xs text-slate-400 block mb-1">12. октобар 2026.</span>
+                            <h3 class="font-semibold text-slate-800 text-sm hover:text-serbia-blue"><a href="#">Јавни оглас за попуњавање слободних радних места у суду</a></h3>
+                            <p class="text-xs text-slate-500 mt-1">Услови, потребна документација и рокови за пријаву кандидата.</p>
+                        </div>
+                        <a href="#" class="text-xs text-serbia-blue font-medium shrink-0 self-start sm:self-center">Прочитај &rarr;</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Sekcija za preuzimanje obrazaca -->
+            <section id="obrasci" class="bg-white p-6 sm:p-8 rounded-xl border border-slate-200 shadow-sm">
+                <h2 class="text-xl font-bold text-slate-900 mb-4">Најчешћи обрасци за преузимање</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+                    <a href="#" class="flex items-center p-3 rounded-lg border border-slate-200 hover:bg-blue-50/50 hover:border-serbia-blue transition group">
+                        <i class="fa-regular fa-file-pdf text-red-500 text-lg mr-3"></i>
+                        <span class="text-xs font-medium text-slate-700 group-hover:text-serbia-blue">Захтев за уверење о невођењу кривичног поступка</span>
+                    </a>
+                    <a href="#" class="flex items-center p-3 rounded-lg border border-slate-200 hover:bg-blue-50/50 hover:border-serbia-blue transition group">
+                        <i class="fa-regular fa-file-word text-blue-600 text-lg mr-3"></i>
+                        <span class="text-xs font-medium text-slate-700 group-hover:text-serbia-blue">Молба за разгледање и преписивање списа</span>
+                    </a>
+                    <a href="#" class="flex items-center p-3 rounded-lg border border-slate-200 hover:bg-blue-50/50 hover:border-serbia-blue transition group">
+                        <i class="fa-regular fa-file-pdf text-red-500 text-lg mr-3"></i>
+                        <span class="text-xs font-medium text-slate-700 group-hover:text-serbia-blue">Захтев за ослобађање од плаћања трошкова поступка</span>
+                    </a>
+                    <a href="#" class="flex items-center p-3 rounded-lg border border-slate-200 hover:bg-blue-50/50 hover:border-serbia-blue transition group">
+                        <i class="fa-regular fa-file-word text-blue-600 text-lg mr-3"></i>
+                        <span class="text-xs font-medium text-slate-700 group-hover:text-serbia-blue">Захтев за приступ информацијама од јавног значаја</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <!-- Desna kolona (Radno vreme, Računi, Brzi kontakti) - 1/3 širine -->
+        <aside class="space-y-6">
+            
+            <!-- Radno vreme kartica -->
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-slate-900 text-base mb-4 flex items-center">
+                    <i class="fa-regular fa-clock text-serbia-blue mr-2"></i> Радно време и пријем
+                </h3>
+                <ul class="text-xs space-y-2.5 text-slate-600">
+                    <li class="flex justify-between pb-2 border-b border-slate-100">
+                        <span>Радно време суда:</span>
+                        <strong class="text-slate-800">07:30 – 15:30</strong>
+                    </li>
+                    <li class="flex justify-between pb-2 border-b border-slate-100">
+                        <span>Пријем писмена (писарница):</span>
+                        <strong class="text-slate-800">07:30 – 15:30</strong>
+                    </li>
+                    <li class="flex justify-between pb-2 border-b border-slate-100">
+                        <span>Разгледање судских списа:</span>
+                        <strong class="text-slate-800">10:00 – 14:00</strong>
+                    </li>
+                    <li class="flex justify-between text-amber-700 font-medium">
+                        <span>Дневни одмор (пауза):</span>
+                        <span>09:00 – 09:30</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Uplate i žiro računi -->
+            <div id="takse" class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+                <h3 class="font-bold text-slate-900 text-base mb-3 flex items-center">
+                    <i class="fa-solid fa-credit-card text-serbia-blue mr-2"></i> Подаци за плаћање
+                </h3>
+                <div class="space-y-3 text-xs">
+                    <div class="p-3 bg-slate-50 rounded-lg">
+                        <span class="text-slate-500 block mb-0.5">Судске таксе (рачун):</span>
+                        <code class="text-slate-900 font-bold font-mono text-xs select-all">840-29649845-78</code>
+                    </div>
+                    <div class="p-3 bg-slate-50 rounded-lg">
+                        <span class="text-slate-500 block mb-0.5">Депозит суда:</span>
+                        <code class="text-slate-900 font-bold font-mono text-xs select-all">840-269802-90</code>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 pt-1 text-slate-500">
+                        <div>ПИБ: <strong>106400907</strong></div>
+                        <div>МБ: <strong>08864322</strong></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Elektronski podnesak -->
+            <div class="bg-blue-50 border border-blue-200 p-5 rounded-xl text-xs space-y-2">
+                <div class="flex items-center text-serbia-blue font-bold text-sm">
+                    <i class="fa-solid fa-envelope-circle-check text-base mr-2"></i> Е-Поднесци
+                </div>
+                <p class="text-slate-600">Адреса искључиво за пријем електронских поднесака у складу са законом:</p>
+                <a href="mailto:elektronski.podnesak@vs.os.sud.rs" class="text-serbia-blue font-bold break-all hover:underline block">elektronski.podnesak@vs.os.sud.rs</a>
+            </div>
+
+            <!-- Kampanja Isključi nasilje -->
+            <div class="bg-gradient-to-r from-red-600 to-rose-700 text-white p-5 rounded-xl shadow-sm text-center">
+                <i class="fa-solid fa-hand text-3xl mb-2 text-rose-200"></i>
+                <h4 class="font-bold text-sm uppercase tracking-wide">Искључи насиље</h4>
+                <p class="text-xs text-rose-100 mt-1 mb-3">Пријавите насиље у породици. Помоћ је доступна 24/7.</p>
+                <a href="https://iskljucinasilje.rs" target="_blank" class="inline-block bg-white text-red-700 text-xs font-bold px-3 py-1.5 rounded-full hover:bg-rose-50 transition">Сазнај више</a>
+            </div>
+
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer id="kontakt" class="bg-slate-900 text-slate-300 text-xs mt-12 border-t-4 border-serbia-gold">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3">Основни суд у Вршцу</h4>
+                <p class="text-slate-400 leading-relaxed mb-2">Жарка Зрењанина 41-43, 26300 Вршац</p>
+                <p class="text-slate-400">Централа: 013/831-343</p>
+                <p class="text-slate-400">Факс: 013/831-343</p>
+                <p class="text-slate-400">Е-пошта: <a href="mailto:uprava@vs.os.sud.rs" class="text-blue-400 hover:underline">uprava@vs.os.sud.rs</a></p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3">Судска јединица Бела Црква</h4>
+                <p class="text-slate-400 leading-relaxed mb-2">Бели Трг 1, 26340 Бела Црква</p>
+                <p class="text-slate-400">Телефон: 013/851-171</p>
+                <p class="text-slate-400 mt-2">Медијација: <a href="mailto:medijacija@vs.os.sud.rs" class="text-blue-400 hover:underline">medijacija@vs.os.sud.rs</a></p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold text-sm mb-3">Корисни линкови</h4>
+                <ul class="space-y-1.5 text-slate-400">
+                    <li><a href="https://www.mpravde.gov.rs" target="_blank" class="hover:text-white transition">Министарство правде РС</a></li>
+                    <li><a href="https://www.vk.sud.rs" target="_blank" class="hover:text-white transition">Врховни суд Републике Србије</a></li>
+                    <li><a href="https://portal.sud.rs" target="_blank" class="hover:text-white transition">Портал судова Србије</a></li>
+                    <li><a href="#" class="hover:text-white transition">Информатор о раду суда</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bg-slate-950 py-4 px-4 border-t border-slate-800 text-center text-slate-500">
+            <p>&copy; 2026 Основни суд у Вршцу. Сва права задржана. Званична презентација суда.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
